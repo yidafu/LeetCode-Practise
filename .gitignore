@@ -23,7 +23,8 @@ hs_err_pid*
 
 # idea
 .idea/
+out/
 LeetCode-Practise.iml
 
 # package gitignore
-src/org.yidafu.leetcode.Main
+src/Main
