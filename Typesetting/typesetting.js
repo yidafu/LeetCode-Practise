@@ -5,7 +5,20 @@ function typesetting( str, N ) {
     let arr = str.split('')
     let out = []
     while( arr.length ) {
-        out.push( arr.slice( 0, lineCount ) )
+        out.push( arr.splice( 0, rowCount ) )
     }
-    console.log( out )
+    out = out.reverse()
+    let reStr = ''
+    for (var i = 0; i <out[ out.length - 1 ].length; i++) {
+        for (var j = 0; j < out.length; j++) {
+            if( out[j][i] == undefined )
+                reStr += " "
+            else
+                reStr += out[j][i]
+        }
+        reStr += "\n"
+    }
+    console.log( reStr )
 }
+
+typesetting( "This is a test case", 4)
